@@ -28,17 +28,14 @@ Introduction to Normalizing Flows and how to implement them in Julia.
 
 ## Normalizing Flows
 
-Change of variables rule (and application of the chain rule) of a random variable $\mathbf{z} \sim q(\mathbf{z})$
-through a function $f \colon \mathbb{R}^d \rightarrow \mathbb{R}^d$ to $\mathbf{z}' = f(\mathbf{z})$:
+Change of variables rule (and application of the chain rule) of a random variable $\mathbf{z} \sim q(\mathbf{z})$ through a function $f \colon \mathbb{R}^d \rightarrow \mathbb{R}^d$ to $\mathbf{z}' = f(\mathbf{z})$:
 
 \begin{equation}
 q(\mathbf{z}') = q(\mathbf{z}) \bigg| \det \frac{\partial f^{-1}}{\partial \mathbf{z}'} \bigg| = 
                  q(\mathbf{z}) \bigg| \det \frac{\partial f}{\partial \mathbf{z}} \bigg|^{-1}
 \end{equation}
 
-Complex densities can be constructed by composing simple maps and applying the above equation. The density 
-$q_K(\mathbf{z}_K)$ obtained by successively transforming a random variable $\mathbf{z}_0$ with distribution $q_0$ 
-through a chain of $K$ transformations $f_k$ can be defined as:
+Complex densities can be constructed by composing simple maps and applying the above equation. The density $q_K(\mathbf{z}_K)$ obtained by successively transforming a random variable $\mathbf{z}_0$ with distribution $q_0$ through a chain of $K$ transformations $f_k$ can be defined as:
 
 $$
 \begin{align}
@@ -49,8 +46,7 @@ $$
 
 <!-- What properties should f satisfy? -->
 
-Each transformation therefore must be sufficiently expressive while being easily invertible and have an 
-efficient to compute Jacobian determinant.
+Each transformation therefore must be sufficiently expressive while being easily invertible and have an efficient to compute Jacobian determinant.
 
 ## Summary
 
@@ -72,21 +68,13 @@ attention. Splines. -->
 3. Beyond bijections: surjection and stochastic layers.
 4. Continuous Normalizing Flows.
 
-Probably split this page into a few subpages e.g. basics, advanced, odes. This summary can discuss what is on
-each page.
+Probably split this page into a few subpages e.g. basics, advanced, odes. This summary can discuss what is on each page.
 
 ## Bijectors.jl
 
-In PyTorch it is typical for authors to write their own flow modules from scratch (..., ..., and ... to name a few) 
-following no set standard. In julia, however, we have [Bijectors.jl](https://github.com/TuringLang/Bijectors.jl) 
-which offers a standard `Bijector` type with a plethora of methods, simplifying code writing and sharing. That's not
-to say this isn't possible in PyTorch, it just hasn't happened and is less likely to[^julia-sharing]. Beyond that, the 
-power of multiple dispatch allows us to use syntax we already know e.g. we can sample a flow with `rand(flow)` and 
-get the inverse transformation with `inv(flow)`.
+In PyTorch it is typical for authors to write their own flow modules from scratch (..., ..., and ... to name a few) following no set standard. In julia, however, we have [Bijectors.jl](https://github.com/TuringLang/Bijectors.jl) which offers a standard `Bijector` type with a plethora of methods, simplifying code writing and sharing. That's not to say this isn't possible in PyTorch, it just hasn't happened and is less likely to[^julia-sharing]. Beyond that, the power of multiple dispatch allows us to use syntax we already know e.g. we can sample a flow with `rand(flow)` and get the inverse transformation with `inv(flow)`.
 
-To implement a bijector `b` there are three functions we need to write: the forwards pass `b(x)`, the inverse
-`inv(b)(x)`, and  $\log | \det \mathbf{J} |$ `logabsdetjac(b, x)`. To see this in action, lets write our own `Exp` 
-bijector for vector inputs:
+To implement a bijector `b` there are three functions we need to write: the forwards pass `b(x)`, the inverse `inv(b)(x)`, and  $\log \| \det \mathbf{J} \|$ `logabsdetjac(b, x)`. To see this in action, lets write our own `Exp` bijector for vector inputs:
 
 ```julia
 struct Exp <: Bijector{1} end
@@ -95,32 +83,21 @@ struct Exp <: Bijector{1} end
 logabsdetjac(b::Exp, x) = sum(x)
 ```
 
-Here `Exp <: Bijector{1}` says that `Exp` is a subtype of a 1D `Bijector`. Alternatively, we could subtype our 
-`Exp` under `ADBijector` which will brute force the jacobian using automatic differentiation so we don't have to
-implement `logabsdetjac`. And that's it! All operations defined on bijectors (see home page for list) now work. 
-With that said, we often also want to  manually implement `forward(b, x)` which calculates both the forward pass 
-and logabsdetjac, `x ↦ b(x), log｜det J(b, x)｜`, in one go for efficiency.
+Here `Exp <: Bijector{1}` says that `Exp` is a subtype of a 1D `Bijector`. Alternatively, we could subtype our `Exp` under `ADBijector` which will brute force the jacobian using automatic differentiation so we don't have to implement `logabsdetjac`. And that's it! All operations defined on bijectors (see home page for list) now work. With that said, we often also want to  manually implement `forward(b, x)` which calculates both the forward pass and logabsdetjac, `x ↦ b(x), log｜det J(b, x)｜`, in one go for efficiency.
 
-We can easily compose bijectors the same way we compose functions generally in julia: `b1 ∘ b2`, which is 
-equivalent to `x ↦ b1(b2(x))`. Alternatively, we can use composel and composer to compose a list of bijectors
-left-to-right and right-to-left, respectively.
+We can easily compose bijectors the same way we compose functions generally in julia: `b1 ∘ b2`, which is equivalent to `x ↦ b1(b2(x))`. Alternatively, we can use composel and composer to compose a list of bijectors left-to-right and right-to-left, respectively.
 
 <!-- composel and composer are really just x ↦ foldl(∘, x) and x ↦ foldr(∘, x) resp. -->
 
-With our new bijector, we want to transform a simple base distribution, e.g. `dist = MvNormal(2, 1)` to a complex 
-one. To do this we call `transformed(dist, b)` which wraps our flow as a `TransformedDistribution`, allowing
-sampling `rand(flow)`, likelihood evaluation `logpdf(flow, x)`, etc.
+With our new bijector, we want to transform a simple base distribution, e.g. `dist = MvNormal(2, 1)` to a complex one. To do this we call `transformed(dist, b)` which wraps our flow as a `TransformedDistribution`, allowing sampling `rand(flow)`, likelihood evaluation `logpdf(flow, x)`, etc.
 
 # Some Flows
 
-Introduce and implement some commonly used flows. Task is to design functions that are expressive as possible 
-while still being efficiently invertible.
+Introduce and implement some commonly used flows. Task is to design functions that are expressive as possible while still being efficiently invertible.
 
 ## Affine Transformation
 
-A simple example of an invertible function used in normalizing flows is the affine coupling layer which divides 
-its input into two sets, $\mathbf{x}^{(1:d)}$ and $\mathbf{x}^{(d+1:D)}$, then passes one set directly to the 
-output and performs an affine transformation on the latter:
+A simple example of an invertible function used in normalizing flows is the affine coupling layer which divides its input into two sets, $\mathbf{x}^{(1:d)}$ and $\mathbf{x}^{(d+1:D)}$, then passes one set directly to the output and performs an affine transformation on the latter:
 
 $$
 \begin{align}
@@ -129,8 +106,7 @@ $$
 \end{align}
 $$
 
-where $f_\sigma$ and $f_\mu$ are arbitrarily complex functions that do not need to be invertible. This coupling 
-layer is easily inverted as
+where $f_\sigma$ and $f_\mu$ are arbitrarily complex functions that do not need to be invertible. This coupling layer is easily inverted as
 
 $$
 \begin{align}
@@ -142,10 +118,7 @@ $$
 
 <!-- Could merge both of the above into a single line like in lilwengs blog. -->
 
-Since the jacobian matrix is lower triangular, its log-determinant can be efficiently computed as 
-$\sum_1^d \ln | f_\sigma(x^{(i)}) |$. Although stacking parameterising affine transformations with neural 
-networks can lead to reasonably complex functions, the transformation is still limited and only affects one 
-portion of the inputs at a time therefore requiring a substantial number of parameters in total.
+Since the jacobian matrix is lower triangular, its log-determinant can be efficiently computed as $\sum_1^d \ln \| f_\sigma(x^{(i)}) \|$. Although stacking parameterising affine transformations with neural networks can lead to reasonably complex functions, the transformation is still limited and only affects one portion of the inputs at a time therefore requiring a substantial number of parameters in total.
 
 $$
 \begin{align}
@@ -156,6 +129,9 @@ $$
 $$
 
 Jacobian is lower triangular so determinant is the trace (sum of elements on the diagonal)
+
+{: .notice--info}
+Maybe change below so it is logabsdet meaning the end can have the exp removed.
 
 $$
 \begin{equation}
@@ -192,20 +168,12 @@ end
 Note that `chunk` isn't defined in any packages used. See Helper functions at the bottom of this page for its definition.
 
 {: .notice--info}
-Bijectors.jl has a few methods that can be used to build this affine coupling bijection:`Shift`, `Scale`, and `Coupling`,
-however, I found it simpler and more parallelisable to implement this in its entirety as here. If anyone has a nicer
-implementation I would love to see it.
+Bijectors.jl has a few methods that can be used to build this affine coupling bijection:`Shift`, `Scale`, and `Coupling`, however, I found it simpler and more parallelisable to implement this in its entirety as here. If anyone has a nicer implementation I would love to see it.
 
 
 ## Invertible 1x1 Convolution
 
-A clear problem with coupling layers is that a transformation is only applied to one portion of the inputs. A 
-simple solution to this is to permute dimensions after each coupling layer so each successive transform is 
-applied to opposite parts of the input. More generally, a permutation can be represented as a $1 \times 1$ 
-convolution with equal numbers of input and output channels. The forward pass is therefore written as 
-$ \forall\_{i, j} : \mathbf{z}\_{i,j} = \mathbf{W}\mathbf{x}\_{i,j} $, and the inverse transform as 
-$\forall\_{i, j} : \mathbf{x}\_{i,j} = \mathbf{W}^{-1}\mathbf{z}\_{i,j}$. The jacobian determinant can thus be
-calculated as:
+A clear problem with coupling layers is that a transformation is only applied to one portion of the inputs. A simple solution to this is to permute dimensions after each coupling layer so each successive transform is applied to opposite parts of the input. More generally, a permutation can be represented as a $1 \times 1$ convolution with equal numbers of input and output channels. The forward pass is therefore written as $ \forall\_{i, j} : \mathbf{z}\_{i,j} = \mathbf{W}\mathbf{x}\_{i,j} $, and the inverse transform as $\forall\_{i, j} : \mathbf{x}\_{i,j} = \mathbf{W}^{-1}\mathbf{z}\_{i,j}$. The jacobian determinant can thus be calculated as:
 
 $$
 \begin{align}
@@ -237,11 +205,7 @@ Probably better to initialise the weights more carefully.
 
 ## Putting it all together
 
-There is one more tool we need to be able to train a deep normalizing flow: a normalisation layer. Most of the time,
-normalisation layers are just affine transformations where the shift and scale parameters are determined by the data.
-Batch normalisation, for instance, calculates shift and scale as the mean and standard-deviation respectively, 
-per-dimension over a batch. The inverse can thus be calculated using running estimates of the mean and 
-standard-deviation. Bijectors.jl has already implemented this for your convenience `InvertibleBatchNorm`.
+There is one more tool we need to be able to train a deep normalizing flow: a normalisation layer. Most of the time, normalisation layers are just affine transformations where the shift and scale parameters are determined by the data. Batch normalisation, for instance, calculates shift and scale as the mean and standard-deviation respectively, per-dimension over a batch. The inverse can thus be calculated using running estimates of the mean and standard-deviation. Bijectors.jl has already implemented this for your convenience `InvertibleBatchNorm`.
 
 ```julia
 numflows = 6
@@ -290,11 +254,9 @@ Need a working spectral norm (i.e. use Zygote branch with Array mutations suppor
 
 # Beyond Bijections
 
-Maybe discuss SurVAE first as compositions of bijections, surjections and stochastic layers, then RADs and Stochastic NFs as specific implementations.
-Or perhaps instead discuss RADs then say that this is one surjection, and discuss SurVAE. Then discuss stochastic layers (vs a stochastic VAE layer).
+Maybe discuss SurVAE first as compositions of bijections, surjections and stochastic layers, then RADs and Stochastic NFs as specific implementations. Or perhaps instead discuss RADs then say that this is one surjection, and discuss SurVAE. Then discuss stochastic layers (vs a stochastic VAE layer).
 
-'A major caveat of sampling with exactly invertible functions forphysical problems are topological constraints... For example, when trying to map a unimodal 
-Gaussian distribution to a bimodal distribution with affine coupling layers, a connection between the modes remains.'
+'A major caveat of sampling with exactly invertible functions forphysical problems are topological constraints... For example, when trying to map a unimodal Gaussian distribution to a bimodal distribution with affine coupling layers, a connection between the modes remains.'
 
 Turing.jl already does variational approaches and MCMC sampling approaches. Wonder if they could be composed easily.
 
@@ -302,13 +264,9 @@ Turing.jl already does variational approaches and MCMC sampling approaches. Wond
 
 Helful to have surjective layers...
 
-'Interestingly, RAD can be seen to implement a class of inference surjections that rely on partitioning of the data space. 
-The partitioning is learned during training, thus allowing learning of expressive inference surjections. However, careful parameterization 
-is required for stable gradient-based training.'
+'Interestingly, RAD can be seen to implement a class of inference surjections that rely on partitioning of the data space. The partitioning is learned during training, thus allowing learning of expressive inference surjections. However, careful parameterization is required for stable gradient-based training.'
 
-'Wu et al. (2020) (Stochastic Normalizing Flows) propose an extended flow framework consisting of bijective and stochastic transformations 
-using MCMC transition kernels. Their method utilizes the same computation as in the general formulation in Algorithm 1, but does not consider 
-surjective maps or an explicit connection to VAEs. Their work shows that MCMC kernels may also be implemented as stochastic transformations in SurVAE Flows.'
+'Wu et al. (2020) (Stochastic Normalizing Flows) propose an extended flow framework consisting of bijective and stochastic transformations using MCMC transition kernels. Their method utilizes the same computation as in the general formulation in Algorithm 1, but does not consider surjective maps or an explicit connection to VAEs. Their work shows that MCMC kernels may also be implemented as stochastic transformations in SurVAE Flows.'
 
 Abs surjection.
 
@@ -335,9 +293,7 @@ Choose RADs at cost of losing asymptotically unbiased sampling
 
 ## Augmented Normalizing Flows
 
-Augment with noise e; transform e conditioned on x into z; transform x conditioned on z into y (the output). Instead of maximising the marginal likelihood 
-of x’s, they maximise p(x, e), allowing use of an augmented data space. $\log p(x) – \log p(x, e) – H(e) = D\_{KL}(q(e)||p(e|x))$. The log marginal likelihood 
-$\log p(x)$ can be monte-carlo approximated by sampling es.
+Augment with noise e; transform e conditioned on x into z; transform x conditioned on z into y (the output). Instead of maximising the marginal likelihood of x’s, they maximise p(x, e), allowing use of an augmented data space. $\log p(x) – \log p(x, e) – H(e) = D\_{KL}(q(e) \| \| p(e\|x))$. The log marginal likelihood $\log p(x)$ can be monte-carlo approximated by sampling es.
 
 $$
 \begin{equation}
@@ -352,9 +308,9 @@ struct Augment <: Surjector{1} end
 
 (s::Augment)(x::AbstractArray) = vcat(x, randn!(similar(x)))
 
-logabsdetjac(s::Augment, x::AbstractArray) = zeros(eltype(x), size(x,2))
+logabsdetjac(s::Augment, x::AbstractArray) = zeros(eltype(x), size(x, 2))
 
-(is::Inverse{<:Augment>}) = selectdim(x, 1, 1:div(size(x, 1), 2))
+(is::Inverse{<:Augment}) = selectdim(x, 1, 1:div(size(x, 1), 2))
 ```
 
 <!-- For logabsdetjac check out maxpool surjector since we maximise the likelihood that the noise is noisy. -->
@@ -365,8 +321,7 @@ Wonder if we could use Turing variational inference to implement affine layer?
 
 ## Stochastic Normalizing Flows
 
-Stochastic Normalizing Flows: Composing bijective layers and stochastic layers is a compromise between fully bijective layers (more expressive) and full MCMC
-(much faster than full MCMC).
+Stochastic Normalizing Flows: Composing bijective layers and stochastic layers is a compromise between fully bijective layers (more expressive) and full MCMC (much faster than full MCMC).
 
 Choose stochastic normalising flows at cost of increasing runtime (and maybe stability?)
 
@@ -470,8 +425,7 @@ Maybe having forward and inverse functions would make it clearer? Even if it wou
 
 ## Augmented NODEs
 
-Discrete transformations e.g. affine coupling allow flow paths to pass through each other. Continuous flows can't do this.
-So add an extra dimension to flow though. Easy.
+Discrete transformations e.g. affine coupling allow flow paths to pass through each other. Continuous flows can't do this. So add an extra dimension to flow though. Easy.
 
 ## OT-Flow
 
