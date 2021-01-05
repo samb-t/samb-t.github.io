@@ -479,7 +479,9 @@ Problems with CNF:
 1. Can require large number of evaluations esp. when the parameters lead to a stiff ODE or dynamics that change quickly in time.
 2. Building the jacobian to compute the trace is expensive. Trace estimates reduce this but introduce error.
 
-Think I saw that this was already implemented in DiffEqFlux. Excatly calculates the jacobian in O(d) time, same as trace estimate with 1 
+<!-- Mentioned in an issue in DiffEqFlux but not yet implemented I don't think. -->
+
+Exactly calculates the jacobian in O(d) time, same as trace estimate with 1 
 Hutchkinson vector.
 
 
