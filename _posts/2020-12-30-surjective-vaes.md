@@ -304,11 +304,15 @@ $$
 Really, this is as you would expect. Concat x with noise -> affine coupling -> reverse -> affine coupling. Maximise likelihood that output is normal.
 
 ```julia
-struct Augment <: Surjector{1} end
+struct Augment <: Surjector{1} 
+    dist::Distribution
+    Augment(dim::Int) = new(MvNormal(dim, 1))
+end
 
-(s::Augment)(x::AbstractArray) = vcat(x, randn!(similar(x)))
-
-logabsdetjac(s::Augment, x::AbstractArray) = zeros(eltype(x), size(x, 2))
+function forward(s::Augment, x::AbstractArray)
+    e, logpdf = forward(a.dist, size(x, 2))
+    return (rv = vcat(x, e), logabsdetjac = -logpdf)
+end
 
 (is::Inverse{<:Augment}) = selectdim(x, 1, 1:div(size(x, 1), 2))
 ```
@@ -317,6 +321,10 @@ logabsdetjac(s::Augment, x::AbstractArray) = zeros(eltype(x), size(x, 2))
 <!-- Probably not 0, probably vcat(zeros(), logpdf(z)) ??? log p(x, e) = log p(x|z) + log p(z). Not sure... -->
 
 Wonder if we could use Turing variational inference to implement affine layer?
+
+
+Augment followed by affine coupling layers is an augmented normalizing flow.
+Augment followed by a bijection then a slice is a Continuously Indexed Normalising Flow.
 
 
 ## Stochastic Normalizing Flows
@@ -330,6 +338,8 @@ Turing.jl is great for probabilistic programming, implementing MCMC samplers etc
 Might just be able to define a Bijector with an energy model. And forwards & backwards passes are both just somthing like sample(energy, MetropolisHastings())
 
 Not tested it. Not a bijector. Would be better to use Turing pre-defined MCMC but not sure how to batch properly.
+
+<!-- Really, MetropolisMCFlow <: Samplable -->
 
 ```julia
 struct MetropolisMCFlow <: Bijector{1}
