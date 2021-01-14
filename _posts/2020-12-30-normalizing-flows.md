@@ -231,6 +231,9 @@ flow = transformed(d, b)
 
 Moons, checkerboard, etc. plots.
 
+## Multi-Scale Architectures
+
+Factoring out half the variables.
 
 ## Splines
 
@@ -289,7 +292,9 @@ end
 
 RADs: 'Combine piecewise invertible functions with discrete auxiliary variables, selecting which invertible function applies, to describe a deep mixture model.''
 
-Choose RADs at cost of losing asymptotically unbiased sampling
+Choose RADs at cost of losing asymptotically unbiased sampling.
+
+Think rads are only useful in inference direction. Might still be good to add in, might not, check.
 
 ## Augmented Normalizing Flows
 
