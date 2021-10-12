@@ -37,6 +37,9 @@ $type-size-8 : 0.625em !default;  // ~10px
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
-
-
+.align-left-50 {
+    @include breakpoint($medium) {
+        width: 50%;
+    }
+}
 

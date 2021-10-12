@@ -1,0 +1,28 @@
+Sam Bond-Taylor:
+  name: "Sam Bond-Taylor"
+  links:
+    - label: "Email"
+      url: "mailto:samuel.e.bond-taylor@durham.ac.uk"
+    - label: "Website"
+      url: "/"
+    - label: "Twitter"
+      url: "https://twitter.com/sambondtaylor/"
+  
+Chris G. Willcocks:
+  name: "Chris G. Willcocks"
+  links:
+    - label: "Email"
+      url: "mailto:christopher.g.willcocks@durham.ac.uk"
+    - label: "Website"
+      url: "ttps://cwkx.github.io"
+    - label: "Twitter"
+      url: "https://twitter.com/cwkx"
+
+Peter Hessey:
+  name: "Peter Hessey"
+
+Hiroshi Sasaki:
+  name: "Hiroshi Sasaki"
+
+Toby P. Breckon:
+  name: "Toby P. Breckon"

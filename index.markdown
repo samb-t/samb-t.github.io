@@ -48,22 +48,28 @@ Proteins
 
 <!--- Make images more rectangular to work better on mobile devices -->
 ![image-left](/assets/images/GON-image-150.png){: .align-left}
+**Unleashing Transformers** <br/> 
+arXiv, 2021 <br/> 
+*S. Bond-Taylor, P. Hessey, H. Sasaki, T. P. Breckon and C. G. Willcocks* <br/>
+[[Project page]](/projects/unleashing-transformers)  [[Preprint]]()
+
+![image-left](/assets/images/GON-image-150.png){: .align-left}
 **Gradient Origin Networks** <br/> 
-arXiv preprint  arXiv:2007.02798, 2020 <br/> 
+International Conference on Learning Representations, 2021 <br/> 
 *S. Bond-Taylor and C. G. Willcocks* <br/>
 [[Project page]](https://cwkx.github.io/data/GON/) [[Code]](https://github.com/cwkx/GON) [[Preprint]](https://arxiv.org/pdf/2007.02798.pdf)
 
 ![image-left](/assets/images/denoising-diffusion-150.jpg){: .align-left}
 **Deep Generative Model Survey** <br/> 
-Preprint 2021 <br/> 
-*S. Bond-Taylor, A. Leach and C. G. Willcocks* <br/>
-[[Preprint]]
+IEEE Transactions on Pattern Analysis and Machine Intelligence, 2021 <br/> 
+*S. Bond-Taylor, A. Leach, Y. Long and C. G. Willcocks* <br/>
+[[Preprint]](https://arxiv.org/pdf/2103.04922.pdf)
 
 <!--- Temp image. Probably copywrited -->
 ![image-left](/assets/images/protein-docking-150.jpg){: .align-left}
 **Shape Tracing: An extension of sphere tracing for 3D non-convex collision in protein docking** <br/> 
-IEEE BIBE 2020<br/> 
+IEEE International Conference on Bioinformatics and Bioengineering 2020<br/> 
 *A. Leach, Lucas S. P. Rudden, S. Bond-Taylor, J. C. Brigham, M. T. Degiacomi and C. G. Willcocks* <br/>
-<!--- [[Paper]] -->
+[[Paper]](https://ieeexplore.ieee.org/abstract/document/9288105)
 
 

@@ -90,8 +90,8 @@ defaults:
       # share: true
       # related: true
 
-paginate: 5 # amount of posts to show
-paginate_path: /page:num/
+paginate: 0 # amount of posts to show
+paginate_path: /tmp/page:num/
 
 compress_html:
   clippings: all

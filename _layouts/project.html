@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    {% if page.title %}<title>{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}</title>{% endif %}
+    {% if page.excerpt %}<meta content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}" name="description" />{% endif %}
+    {% if page.title %}<meta content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}<" property="og:title" />{% endif %}
+    {% if page.excerpt %}<meta content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}" name="og:description" />{% endif %}
+    <!-- <meta content="summary" name="twitter:card" /> -->
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/css/project_style.css' | relative_url }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="shortcut icon" href="logo.png"> -->
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-90396229-1"></script> -->
+    <script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'UA-90396229-1'); </script>
+</head>
+
+<body>
+
+    {% capture overlay_img_path %}{{ page.header.overlay_image | relative_url }}{% endcapture %}
+
+    {% if page.header.overlay_filter contains "gradient" %}
+      {% capture overlay_filter %}{{ page.header.overlay_filter }}{% endcapture %}
+    {% elsif page.header.overlay_filter contains "rgba" %}
+      {% capture overlay_filter %}{{ page.header.overlay_filter }}{% endcapture %}
+      {% capture overlay_filter %}linear-gradient({{ overlay_filter }}, {{ overlay_filter }}){% endcapture %}
+    {% elsif page.header.overlay_filter %}
+      {% capture overlay_filter %}rgba(0, 0, 0, {{ page.header.overlay_filter }}){% endcapture %}
+      {% capture overlay_filter %}linear-gradient({{ overlay_filter }}, {{ overlay_filter }}){% endcapture %}
+    {% endif %}
+    
+    {% if page.header.image_description %}
+      {% assign image_description = page.header.image_description %}
+    {% else %}
+      {% assign image_description = page.title %}
+    {% endif %}
+    
+    {% assign image_description = image_description | markdownify | strip_html | strip_newlines | escape_once %}
+    
+    <div class="page__hero{% if page.header.overlay_color or page.header.overlay_image %}--overlay{% endif %}"
+      style="{% if page.header.overlay_color %}background-color: {{ page.header.overlay_color | default: 'transparent' }};{% endif %} {% if overlay_img_path %}background-image: {% if overlay_filter %}{{ overlay_filter }}, {% endif %}url('{{ overlay_img_path }}');{% endif %}"
+    >
+      {% if page.header.overlay_color or page.header.overlay_image %}
+        <div>
+          <h1 id="page-title" class="page__title header-text" itemprop="headline" style="color: #f5f5f5;">
+            {% if paginator and site.paginate_show_page_num %}
+              {{ site.title }}{% unless paginator.page == 1 %} {{ site.data.ui-text[site.locale].page | default: "Page" }} {{ paginator.page }}{% endunless %}
+            {% else %}
+              {{ page.title | default: site.title | markdownify | remove: "<p>" | remove: "</p>" }}
+            {% endif %}
+          </h1>
+          {% if page.authors %}
+            <div class="authors">
+                {% for auth in page.authors %}
+                    {% assign author = site.data.authors[auth] | default: auth %}
+                    <a class="header-text" href="{% for link in author.links %} {% if link.label == 'Email' and link.url %} {{ link.url }}  {% endif %} {% endfor %}"><strong>{{ author.name }}</strong></a>{% for auth2 in page.contributed_equally %}{% if auth2 == auth %}*{% endif %}{% endfor %}{% if forloop.last == false %}, {% endif %} 
+                {% endfor %}
+                <br>
+                <small class="header-text">*Authors contributed equally</small>
+                <br>
+                <div>
+                    <a class="header-text" href="https://www.dur.ac.uk/computer.science/"><img style="vertical-align:middle; width:auto; height: 24px;" src="/assets/images/durham.png"><span style=""> Durham University</span></a>
+                </div>
+                <!-- <p>This work has been accepted at ICLR 2021.</p> -->
+            </div>
+        {% endif %}
+        {% if page.links %}
+            <div class="icons">
+                {% for link in page.links %}
+                <a href="{{ link.url }}"><i class="{{ link.icon }}" aria-hidden="true"></i><span> {{ link.label }}</span></a>
+                {% endfor %}
+            </div>
+        {% endif %}
+        </div>
+      {% else %}
+        <img src="{{ page.header.image | relative_url }}" alt="{{ image_description }}" class="page__hero-image">
+      {% endif %}
+      {% if page.header.caption %}
+        <span class="page__hero-caption">{{ page.header.caption | markdownify | remove: "<p>" | remove: "</p>" }}</span>
+      {% endif %}
+    </div>
+    
+
+    <div class="content">
+        {{ content }}
+    </div>
+
+    {% include scripts.html %}
+    
+</body>
