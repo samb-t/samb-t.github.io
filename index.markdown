@@ -28,7 +28,7 @@ International Conference on Learning Representations, 2021 <br/>
 ![image-left](/assets/images/shape-tracing-150.png){: .align-left}
 **Shape Tracing: An extension of sphere tracing for 3D non-convex collision in protein docking** <br/> 
 IEEE International Conference on Bioinformatics and Bioengineering 2020<br/> 
-*A. Leach, L. S.P. Rudden, S. Bond-Taylor, J. C. Brigham, M. T. Degiacomi and C. G. Willcocks* <br/>
+*A. Leach, L. S.P. Rudden, S. Bond-Taylor, J. C. Brigham, M. T. Degiacomi and C. G. Willcocks*
 [[Paper]](https://ieeexplore.ieee.org/abstract/document/9288105)
 
 
