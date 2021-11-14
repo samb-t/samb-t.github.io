@@ -46,7 +46,7 @@ author:
   links:
     - label: "Durham, UK"
       icon: "fas fa-fw fa-map-marker-alt"
-      url: "https://www.dur.ac.uk/computer.science/staff/profile/?id=18951"
+      url: "https://www.durham.ac.uk/staff/samuel-e-bond-taylor/"
     - label: "Email"
       icon: "fas fa-fw fa-envelope"
       url: "mailto:samuel.e.bond-taylor@dur.ac.uk"
@@ -69,7 +69,7 @@ footer:
       url: "https://github.com/samb-t"
     - label: "Durham Profile"
       icon: "fas fa-fw fa-link"
-      url: "https://www.dur.ac.uk/computer.science/staff/profile/?id=18951"
+      url: "https://www.durham.ac.uk/staff/samuel-e-bond-taylor/"
 
 defaults:
   # _posts
