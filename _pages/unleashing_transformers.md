@@ -31,7 +31,6 @@ links:
       url: "https://twitter.com/share?url=https%3A%2F%2Fsamb-t.github.io%2Funleashing-transformers"
 permalink: /unleashing-transformers
 author_profile: false
-google_site_verification: XGMPMp23r5k2e3ICQN4HJx7-mrggkn3COJEAofH1VUU
 gallery1:
   - url: /assets/images/unleashing_transformers/churches_5x5.jpg
     image_path: /assets/images/unleashing_transformers/churches_5x5.jpg
