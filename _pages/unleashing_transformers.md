@@ -6,15 +6,15 @@ header:
     overlay_image: /assets/images/unleashing_transformers/unleashing-transformers-header.jpg
     overlay_filter: rgba(18,17,20,0.7)
     excerpt: Unleashing Transformers
-authors:
-    - Sam Bond-Taylor
-    - Peter Hessey
-    - Hiroshi Sasaki
-    - Toby P. Breckon
-    - Chris G. Willcocks
-contributed_equally:
-    - Sam Bond-Taylor
-    - Peter Hessey
+# authors:
+#     - Sam Bond-Taylor
+#     - Peter Hessey
+#     - Hiroshi Sasaki
+#     - Toby P. Breckon
+#     - Chris G. Willcocks
+# contributed_equally:
+#     - Sam Bond-Taylor
+#     - Peter Hessey
 excerpt: An approach that predicts Vector-Quantized image tokens in parallel to significantly speed up the sampling process.
 links:
     - label: "arXiv"
