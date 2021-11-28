@@ -1,0 +1,110 @@
+div {
+    margin-bottom: 5px;
+    padding: 4px 12px;
+}
+
+body {
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #3d4144;
+    font-size: 90%;
+}
+
+a {
+    color: #3d4144;
+    text-decoration: none;
+}
+
+table.spaced {
+    border-collapse: separate;
+    border-spacing: 50px 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+table.squashed {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+td {
+    border: 0px solid transparent;
+    background-clip: padding-box;
+}
+
+tr>td+td {
+    border-left-width: 10px;
+}
+
+h1.title {
+    text-align: center;
+}
+
+span.spacer {
+    margin-left: 40px;
+}
+
+.authors {
+    color: #f5f5f5;
+    text-align: center;
+}
+
+.header-text {
+    color: #f5f5f5;
+    text-align: center;
+}
+
+.icons {
+    text-align: center;
+}
+
+.icons a {
+    color: #f5f5f5;
+    text-align: center;
+    padding-left: 15px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 550px;
+  }
+
+.contrib {
+    font-size: x-small;
+    font-weight: lighter;
+}
+
+.content {
+    max-width: 1024px;
+    margin: auto;
+}
+
+.info {
+    background-color: #f2f2f2;
+    border-left: 6px solid #b2b2b2;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.bibtex { 
+    background-color: #f2f2f2;
+    font-size: 14px;
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+div.highlighter-rouge {
+    line-height: 1.4;
+    margin-bottom: 0px;
+    padding: 0px 0px;
+}
+
+.highlight {
+    width: 100%;
+}
+
+code {
+    width: 100%;
+} 

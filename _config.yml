@@ -86,4 +86,7 @@ compress_html:
 
 include:
   - _pages
+atom_feed:
+  hide: true
+
 
