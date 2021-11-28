@@ -19,7 +19,7 @@ excerpt: An approach that predicts Vector-Quantized image tokens in parallel to 
 links:
     - label: "arXiv"
       icon: "fa fa-book"
-      url: ""
+      url: "https://arxiv.org/abs/2111.12701"
     - label: "Code"
       icon: "fa fa-github"
       url: "https://github.com/samb-t/unleashing-transformers"
