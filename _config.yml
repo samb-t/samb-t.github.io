@@ -29,6 +29,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: sambondtaylor
 github_username:  samb-t
 markdown: kramdown
+google_site_verification: XGMPMp23r5k2e3ICQN4HJx7-mrggkn3COJEAofH1VUU
 
 # Build settings
 remote_theme: "mmistakes/minimal-mistakes@4.24.0" 
