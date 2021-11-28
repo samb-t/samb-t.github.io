@@ -120,7 +120,7 @@ By predicting tokens in parallel, faster sampling is possible. Specifically, we 
 
 {% include gallery id="gallery3" caption="Additional figures from our paper. Left: unlike autoregressive priors, our approach allows internal image regions to edited directly. Middle: unconditional samples from a model trained on LSUN Bedroom larger than images in the training dataset. Right: impact of sampling temperature on diversity, for small temperature changes it is less obvious how bias has changed." %}
 
-## Citation
+<!-- ## Citation
 
 ```bibtex
 @article{bond2021unleashing,
@@ -129,4 +129,4 @@ By predicting tokens in parallel, faster sampling is possible. Specifically, we 
   journal   = {arXiv preprint arXiv:2111.12701},
   year      = {2021}
 }
-```
+``` -->
