@@ -4,6 +4,7 @@ classes: wide
 author_profile: true
 title: Sam Bond-Taylor
 google_site_verification: XGMPMp23r5k2e3ICQN4HJx7-mrggkn3COJEAofH1VUU
+excerpt: "Sam Bond-Taylor is a PhD student in Computer Science researching generative modelling, unsupervised learning, and machine reasoning."
 ---
 
 ## Research
