@@ -19,7 +19,7 @@ I am a teaching assistant on the [Deep Learning](https://cwkx.github.io/teaching
 **Unleashing Transformers: Parallel Token Prediction with Discrete Absorbing Diffusion for Fast High-Resolution Image Generation from Vector-Quantized Codes** <br/> 
 arXiv, 2021 <br/> 
 *S. Bond-Taylor, P. Hessey, H. Sasaki, T. P. Breckon and C. G. Willcocks* <br/>
-[[Project page]](https://samb-t.github.io/unleashing-transformers) [[Code]](https://github.com/samb-t/unleashing-transformers)  [[Paper]]()
+[[Project page]](https://samb-t.github.io/unleashing-transformers) [[Code]](https://github.com/samb-t/unleashing-transformers)  [[Paper]](https://arxiv.org/abs/2111.12701)
 
 ![image-left](/assets/images/deep_generative_modelling_front.png){: .align-left}
 **Deep Generative Modelling: A Comparative Review of VAEs, GANs, Normalizing Flows, Energy-Based and Autoregressive Models** <br/> 
