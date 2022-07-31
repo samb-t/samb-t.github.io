@@ -17,7 +17,7 @@ I am a teaching assistant on the [Deep Learning](https://cwkx.github.io/teaching
 <!--- TODO: Make images more rectangular to work better on mobile devices -->
 ![image-left](/assets/images/unleashing_transformers_thumbnail.png){: .align-left}
 **Unleashing Transformers: Parallel Token Prediction with Discrete Absorbing Diffusion for Fast High-Resolution Image Generation from Vector-Quantized Codes** <br/> 
-arXiv, 2021 <br/> 
+European Conference on Computer Vision, 2022 <br/> 
 *S. Bond-Taylor, P. Hessey, H. Sasaki, T. P. Breckon and C. G. Willcocks* <br/>
 [[Project page]](https://samb-t.github.io/unleashing-transformers) [[Code]](https://github.com/samb-t/unleashing-transformers)  [[Paper]](https://arxiv.org/abs/2111.12701)
 
