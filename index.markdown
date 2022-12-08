@@ -23,7 +23,7 @@ European Conference on Computer Vision, 2022 <br/>
 
 ![image-left](/assets/images/mednerf_thumbnail.png){: .align-left}
 **MedNeRF: Medical Neural Radiance Fields for Reconstructing 3D-aware CT-Projections from a Single X-ray** <br/> 
-European Conference on Computer Vision, 2022 <br/> 
+IEEE Engineering in Medicine and Biology Conference, 2022 <br/> 
 *A. Corona-Figueroa, J. Frawley, S. Bond-Taylor, S. Bethapudi, H. P.H. Shum and C. G. Willcocks* <br/>
 [[Code]]([https://github.com/samb-t/unleashing-transformers](https://github.com/abrilcf/mednerf))  [[Paper]]([https://arxiv.org/abs/2111.12701](https://arxiv.org/abs/2202.01020))
 
