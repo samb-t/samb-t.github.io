@@ -21,6 +21,12 @@ European Conference on Computer Vision, 2022 <br/>
 *S. Bond-Taylor, P. Hessey, H. Sasaki, T. P. Breckon and C. G. Willcocks* <br/>
 [[Project page]](https://samb-t.github.io/unleashing-transformers) [[Code]](https://github.com/samb-t/unleashing-transformers)  [[Paper]](https://arxiv.org/abs/2111.12701)
 
+![image-left](/assets/images/mednerf_thumbnail.png){: .align-left}
+**MedNeRF: Medical Neural Radiance Fields for Reconstructing 3D-aware CT-Projections from a Single X-ray** <br/> 
+European Conference on Computer Vision, 2022 <br/> 
+*A. Corona-Figueroa, J. Frawley, S. Bond-Taylor, S. Bethapudi, H. P.H. Shum and C. G. Willcocks* <br/>
+[[Code]]([https://github.com/samb-t/unleashing-transformers](https://github.com/abrilcf/mednerf))  [[Paper]]([https://arxiv.org/abs/2111.12701](https://arxiv.org/abs/2202.01020))
+
 ![image-left](/assets/images/deep_generative_modelling_front.png){: .align-left}
 **Deep Generative Modelling: A Comparative Review of VAEs, GANs, Normalizing Flows, Energy-Based and Autoregressive Models** <br/> 
 IEEE Transactions on Pattern Analysis and Machine Intelligence, 2021 <br/> 
@@ -31,7 +37,7 @@ IEEE Transactions on Pattern Analysis and Machine Intelligence, 2021 <br/>
 **Gradient Origin Networks** <br/> 
 International Conference on Learning Representations, 2021 <br/> 
 *S. Bond-Taylor and C. G. Willcocks* <br/>
-[[Project page]](https://cwkx.github.io/data/GON/) [[Code]](https://github.com/cwkx/GON) [[Paper]](https://arxiv.org/pdf/2007.02798.pdf) <br/><br/>
+[[Project page]](https://cwkx.github.io/data/GON/) [[Code]](https://github.com/cwkx/GON) [[Paper]](https://arxiv.org/abs/2007.02798) <br/><br/>
 
 ![image-left](/assets/images/shape-tracing-150.png){: .align-left}
 **Shape Tracing: An extension of sphere tracing for 3D non-convex collision in protein docking** <br/> 
