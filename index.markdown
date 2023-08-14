@@ -25,7 +25,6 @@ arXiv preprint arXiv:2303.18242, 2023 <br/>
 **Unaligned 2D to 3D Translation with Conditional Vector-Quantized Code Diffusion using Transformers** <br/> 
 IEEE International Conference on Computer Vision, 2023 <br/> 
 *A. Corona-Figuera, S. Bond-Taylor, N. Bhowmik, Y. Gaus, T. P. Breckon, H. P. H. Shum and C. G. Willcocks* <br/>
-Coming Soon <br/>
 
 ![image-left](/assets/images/unleashing_transformers_thumbnail.png){: .align-left}
 **Unleashing Transformers: Parallel Token Prediction with Discrete Absorbing Diffusion for Fast High-Resolution Image Generation from Vector-Quantized Codes** <br/> 
