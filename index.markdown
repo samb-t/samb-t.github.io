@@ -7,7 +7,7 @@ excerpt: "Sam Bond-Taylor is a PhD student in Computer Science researching gener
 ---
 
 ## Research
-I am a PhD student in Computer Science at Durham University supervised by [Chris G. Willcocks](https://cwkx.github.io). My interests revolve around deep learning with a focus on unsupervised learning, 
+I am a finishing PhD student in Computer Science at Durham University supervised by [Chris G. Willcocks](https://cwkx.github.io). My interests revolve around deep learning with a focus on unsupervised learning, 
 generative modelling, and machine reasoning. I believe that effective neural models should be able to learn with minimal supervision, in a similar manner to humans.
 I am a teaching assistant on the [Deep Learning](https://cwkx.github.io/teaching.html) module at Durham.
 
@@ -19,7 +19,13 @@ I am a teaching assistant on the [Deep Learning](https://cwkx.github.io/teaching
 **$\infty$-Diff: Infinite Resolution Diffusion with Subsampled Mollified States** <br/> 
 arXiv preprint arXiv:2303.18242, 2023 <br/> 
 *S. Bond-Taylor and C. G. Willcocks* <br/>
-[[Code]](https://github.com/samb-t/infty-diff) [[Paper]](https://arxiv.org/abs/2303.18242)
+[[Code]](https://github.com/samb-t/infty-diff) [[Paper]](https://arxiv.org/abs/2303.18242) <br/>
+
+![image-left](/assets/images/unaligned-2d-3d-thumbnail.png){: .align-left}
+**Unaligned 2D to 3D Translation with Conditional Vector-Quantized Code Diffusion using Transformers** <br/> 
+IEEE International Conference on Computer Vision, 2023 <br/> 
+*A. Corona-Figuera, S. Bond-Taylor, N. Bhowmik, Y. Gaus, T. P. Breckon, H. P. H. Shum and C. G. Willcocks* <br/>
+Coming Soon <br/>
 
 ![image-left](/assets/images/unleashing_transformers_thumbnail.png){: .align-left}
 **Unleashing Transformers: Parallel Token Prediction with Discrete Absorbing Diffusion for Fast High-Resolution Image Generation from Vector-Quantized Codes** <br/> 
