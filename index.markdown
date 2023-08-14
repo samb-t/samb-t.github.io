@@ -15,6 +15,12 @@ I am a teaching assistant on the [Deep Learning](https://cwkx.github.io/teaching
 ## Publications
 
 <!--- TODO: Make images more rectangular to work better on mobile devices -->
+![image-left](/assets/images/infty-diff-thumbnail.png){: .align-left}
+**$\infty$-Diff: Infinite Resolution Diffusion with Subsampled Mollified States** <br/> 
+arXiv preprint arXiv:2303.18242, 2023 <br/> 
+*S. Bond-Taylor and C. G. Willcocks* <br/>
+[[Code]](https://github.com/samb-t/infty-diff) [[Paper]](https://arxiv.org/abs/2303.18242)
+
 ![image-left](/assets/images/unleashing_transformers_thumbnail.png){: .align-left}
 **Unleashing Transformers: Parallel Token Prediction with Discrete Absorbing Diffusion for Fast High-Resolution Image Generation from Vector-Quantized Codes** <br/> 
 European Conference on Computer Vision, 2022 <br/> 
