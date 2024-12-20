@@ -8,7 +8,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# If you need help with YAML syntax, here are some quick references for you: 
+# If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -21,9 +21,7 @@
 title: Sam Bond-Taylor
 email: samuel.e.bond-taylor@dur.ac.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Sam Bond-Taylor is a senior researcher in Microsoft Health Futures UK.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: sambondtaylor
@@ -32,7 +30,7 @@ markdown: kramdown
 google_site_verification: XGMPMp23r5k2e3ICQN4HJx7-mrggkn3COJEAofH1VUU
 
 # Build settings
-remote_theme: "mmistakes/minimal-mistakes@4.24.0" 
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 # theme: minimal-mistakes-jekyll
 plugins:
   - jekyll-include-cache
@@ -43,17 +41,17 @@ name: Sam Bond-Taylor
 author:
   name: "Sam Bond-Taylor"
   avatar: "/assets/images/bio-photo.jpg"
-  bio: "Deep Learning PhD student at Durham University."
+  bio: "Senior Researcher at Microsoft Research."
   links:
-    - label: "Durham, UK"
+    - label: "Cambridge, UK"
       icon: "fas fa-fw fa-map-marker-alt"
-      url: "https://www.durham.ac.uk/staff/samuel-e-bond-taylor/"
+      url: "https://www.microsoft.com/en-us/research/people/sbondtaylor/"
     - label: "Email"
       icon: "fas fa-fw fa-envelope"
-      url: "mailto:samuel.e.bond-taylor@dur.ac.uk"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/sambondtaylor"
+      url: "mailto:sbondtaylor@microsoft.com"
+    - label: "Bluesky"
+      icon: "fab fa-fw fa-bluesky"
+      url: "https://bsky.app/profile/sambondtaylor.bsky.social"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/samb-t"
@@ -61,16 +59,16 @@ footer:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope"
-      url: "mailto:samuel.e.bond-taylor@dur.ac.uk"
-    - label: "Twitter"
+      url: "mailto:sbondtaylor@microsoft.com"
+    - label: "Bluesky"
       icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/sambondtaylor"
+      url: "https://bsky.app/profile/sambondtaylor.bsky.social"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/samb-t"
-    - label: "Durham Profile"
+    - label: "Microsoft Profile"
       icon: "fas fa-fw fa-link"
-      url: "https://www.durham.ac.uk/staff/samuel-e-bond-taylor/"
+      url: "https://www.microsoft.com/en-us/research/people/sbondtaylor/"
 
 defaults:
   # _posts
@@ -89,5 +87,3 @@ include:
   - _pages
 atom_feed:
   hide: true
-
-

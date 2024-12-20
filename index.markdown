@@ -3,7 +3,7 @@ layout: archive
 classes: wide
 author_profile: true
 title: Sam Bond-Taylor
-excerpt: "Sam Bond-Taylor is a senior researcher is Microsoft Health Futures UK."
+excerpt: "Sam Bond-Taylor is a senior researcher in Microsoft Health Futures UK."
 ---
 
 ## Research
