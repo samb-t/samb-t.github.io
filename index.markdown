@@ -18,28 +18,28 @@ Prior to joining Microsoft I studied for my PhD at [Durham University](https://w
 **RadEdit: stress-testing biomedical vision models via diffusion image editing** <br/>
 European Conference on Computer Vision, 2024 <br/>
 *F. Pérez-García, S. Bond-Taylor, P.P Sanchez, B. van Breugel, D.C. Castro, H. Sharma, V. Salvatelli, M.T. Wetscherek, H. Richardson, M.P. Lungren, A. Nori, J. Alvarez-Valle, O. Oktay, M. Ilse* <br/>
-[[Model]](https://huggingface.co/microsoft/radedit) [[Paper]](https://link.springer.com/chapter/10.1007/978-3-031-73254-6_21) <br/><br/>
+[[Model]](https://huggingface.co/microsoft/radedit) [[Paper]](https://link.springer.com/chapter/10.1007/978-3-031-73254-6_21) <br/>
 
 
 ![image-left](/assets/images/MAIRASeg_thumbnail.png){: .align-left}
 **MAIRA-Seg: Enhancing Radiology Report Generation with Segmentation-Aware Multimodal Large Language Models** <br/>
 Machine Learning for Health (ML4H), 2024 <br/>
 *H. Sharma, V. Salvatelli, S. Srivastav, K. Bouzid, S. Bannur, D.C. Castro, M. Ilse, S. Bond-Taylor, M. Prasanna Ranjit, F. Falck, F. Pérez-García, A. Schwaighofer, H. Richardson, M.T. Wetscherek, S.L. Hyland, J. Alvarez-Valle* <br/>
-[[Paper]](https://arxiv.org/abs/2411.11362) <br/><br/>
+[[Paper]](https://arxiv.org/abs/2411.11362) <br/>
 
 <!--- TODO: Make images more rectangular to work better on mobile devices -->
 ![image-left](/assets/images/MAIRA2_thumbnail.png){: .align-left}
 **Maira-2: Grounded Radiology Report Generation** <br/>
 arXiv preprint 2406.04449, 2024 <br/>
 *S. Bannur, K. Bouzid, D.C. Castro, A. Schwaighofer, A. Thieme, S. Bond-Taylor, M. Ilse, F. Pérez-García, V. Salvatelli, H. Sharma, F. Meissen, M. Ranjit, S. Srivastav, J. Gong, N.C.F. Codella, F. Falck, O. Oktay, M.P. Lungren, M.T. Wetscherek, J. Alvarez-Valle, and S.L. Hyland* <br/>
-[[Model]](https://huggingface.co/microsoft/maira-2) [[Paper]](https://arxiv.org/abs/2406.04449) <br/><br/>
+[[Model]](https://huggingface.co/microsoft/maira-2) [[Paper]](https://arxiv.org/abs/2406.04449) <br/>
 
 <!--- TODO: Make images more rectangular to work better on mobile devices -->
 ![image-left](/assets/images/RADDINO_thumbnail.png){: .align-left}
 **RAD-DINO: Exploring Scalable Medical Image Encoders Beyond Text Supervision** <br/>
 arXiv preprint arXiv:2401.10815, 2024 <br/>
 *F. Pérez-García, H. Sharma, S. Bond-Taylor, K. Bouzid, V. Salvatelli, M. Ilse, S. Bannur, D.C. Castro, A. Schwaighofer, M.P. Lungren, M. Wetscherek, N. Codella, S.L. Hyland, J. Alvarez-Valle, and O. Oktay* <br/>
-[[Model]](https://huggingface.co/microsoft/rad-dino) [[Paper]](https://arxiv.org/abs/2401.10815) <br/><br/>
+[[Model]](https://huggingface.co/microsoft/rad-dino) [[Paper]](https://arxiv.org/abs/2401.10815) <br/>
 
 <!--- TODO: Make images more rectangular to work better on mobile devices -->
 ![image-left](/assets/images/infty-diff-thumbnail.png){: .align-left}
