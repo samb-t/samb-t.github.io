@@ -1,0 +1,14 @@
+[tools]
+ruby = "3.4.1"
+
+[tasks.setup]
+description = "Install dependencies"
+run = ["gem install jekyll", "gem install bundler", "bundle install"]
+
+[tasks.bundle]
+description = "Bundle dependencies"
+run = "bundle install"
+
+[tasks.serve]
+description = "Serve the site"
+run = "bundle exec jekyll serve"

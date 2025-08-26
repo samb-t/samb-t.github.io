@@ -1,3 +1,16 @@
+# Setup
+
+Install dependencies:
+```bash
+mise install
+mise run setup
+```
+
+Serve the site locally:
+```bash
+mise run serve
+```
+
 # Chirpy Starter
 
 [![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
