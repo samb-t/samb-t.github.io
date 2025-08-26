@@ -11,4 +11,4 @@ Prior to joining Microsoft I studied for my PhD at [Durham University](https://w
 
 ## Publications
 
-...
+{% include _publications.html %}

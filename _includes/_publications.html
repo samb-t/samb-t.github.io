@@ -1,0 +1,107 @@
+<div class="pubs-wrap">
+  <div class="pubs-grid">
+    {% for pub in site.data.publications %}
+    <article
+      class="pub-card"
+      itemscope
+      itemtype="http://schema.org/ScholarlyArticle"
+    >
+      <a
+        class="pub-thumb"
+        href="{{ pub.paper_url | default: pub.pdf }}"
+        target="_blank"
+        rel="noopener"
+        aria-label="Open {{ pub.title }}"
+      >
+        <div
+          class="thumb-inner"
+          role="img"
+          aria-label="{{ pub.alt | default: pub.title }}"
+          style="background-image:url('{{ pub.image }}')"
+        ></div>
+      </a>
+
+      <div class="pub-info">
+        <h3 class="pub-title" itemprop="name">{{ pub.title }}</h3>
+        {% if pub.venue %}
+        <p class="pub-venue">
+          {{ pub.venue }}{% if pub.year %}, {{ pub.year }}{% endif %}
+        </p>
+        {% endif %}
+
+        <p class="pub-authors" itemprop="author">
+          {% for a in pub.authors %}{% if forloop.first %}{{ a }}{% else %}, {{
+          a }}{% endif %}{% endfor %}
+        </p>
+
+        {% if pub.abstract %}
+        <p class="pub-abstract">
+          {{ pub.abstract | strip_html | truncatewords: 40 }}
+        </p>
+        {% endif %}
+
+        <div class="pub-actions">
+          {% if pub.pdf %}
+          <a
+            class="btn"
+            href="{{ pub.pdf }}"
+            target="_blank"
+            rel="noopener"
+            aria-label="PDF for {{ pub.title }}"
+          >
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M6 2h7l5 5v13a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2z"
+              />
+            </svg>
+            <span>PDF</span>
+          </a>
+          {% endif %} {% if pub.paper_url %}
+          <a
+            class="btn"
+            href="{{ pub.paper_url }}"
+            target="_blank"
+            rel="noopener"
+            aria-label="Page for {{ pub.title }}"
+          >
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M14 3h7v7l-2-2V6.41L10.41 15 9 13.59 19.59 3H14zM5 5h5v2H6v11h11v-4h2v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"
+              />
+            </svg>
+            <span>Paper</span>
+          </a>
+          {% endif %} {% if pub.code_url %}
+          <a
+            class="btn"
+            href="{{ pub.code_url }}"
+            target="_blank"
+            rel="noopener"
+            aria-label="Code for {{ pub.title }}"
+          >
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M9.4 16.6L4.8 12l4.6-4.6L8 5l-6 6 6 6 1.4-1.4zM14.6 7.4L19.2 12l-4.6 4.6L16 19l6-6-6-6-1.4 1.4z"
+              />
+            </svg>
+            <span>Code</span>
+          </a>
+          {% endif %} {% if pub.bib %}
+          <a
+            class="btn ghost"
+            href="{{ pub.bib }}"
+            target="_blank"
+            rel="noopener"
+            aria-label="BibTeX for {{ pub.title }}"
+            >Bib</a
+          >
+          {% endif %}
+        </div>
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+</div>
