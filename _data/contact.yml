@@ -1,18 +1,22 @@
 #  The contact options.
 
-- type: github
-  icon: "fab fa-github"
-
-- type: twitter
-  icon: "fa-brands fa-x-twitter"
-
 - type: email
   icon: "fas fa-envelope"
   noblank: true # open link in current tab
 
-- type: rss
-  icon: "fas fa-rss"
-  noblank: true
+- type: scholar
+  icon: "fab fa-google-scholar"
+  url: "https://scholar.google.com/citations?user=xQrXyoAAAAJ"
+
+- type: github
+  icon: "fab fa-github"
+
+- type: bluesky
+  icon: "fa-brands fa-bluesky"
+  url: "https://bsky.app/profile/sambondtaylor.bsky.social"
+# - type: rss
+#   icon: "fas fa-rss"
+#   noblank: true
 # Uncomment and complete the url below to enable more contact options
 #
 # - type: mastodon
@@ -27,9 +31,9 @@
 #   icon: 'fab fa-stack-overflow'
 #   url:  ''                  # Fill with your stackoverflow homepage
 #
-# - type: bluesky
-#   icon: 'fa-brands fa-bluesky'
-#   url: ''                   # Fill with your Bluesky profile link
+# - type: twitter
+#   icon: 'fa-brands fa-x-twitter'
+#   url: ''                   # Fill with your Twitter profile link
 #
 # - type: reddit
 #   icon: 'fa-brands fa-reddit'
