@@ -3,6 +3,13 @@
 # Import the theme
 theme: jekyll-theme-chirpy
 
+plugins:
+  # Your other plugins
+  - jekyll-redirect-from
+
+whitelist:
+  - jekyll-redirect-from
+
 # The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
 # If it has the same name as one of the files in folder `_data/locales`, the layout language will also be changed,
 # otherwise, the layout language will use the default value of 'en'.
@@ -148,6 +155,7 @@ pwa:
       # - "/example"  # URLs match `<SITE_URL>/example/*` will not be cached by the PWA
 
 paginate: 10
+paginate_path: /posts/page:num/
 
 # The base URL of your site
 baseurl: ""
