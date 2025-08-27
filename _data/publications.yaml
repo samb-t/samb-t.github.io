@@ -1,11 +1,219 @@
-- id: smith2024
-  title: "Gradient Origin Networks"
-  venue: "International Conference on Learning Representations 2021"
+- id: ilse2025data
+  title: "Data Scaling Laws for Radiology Foundation Models"
+  venue: "arXiv preprint 2509.12818, 2025"
   authors:
-    - "Sam Bond-Taylor"
-    - "Chris Willcocks"
-  pdf: "https://arxiv.org/pdf/2007.02798"
+    - "M. Ilse"
+    - "H. Sharma"
+    - "A. Schwaighofer"
+    - "S. Bond-Taylor"
+    - "F. Pérez-García"
+    - "O. Melnichenko"
+    - "A.-M.G. Sykes"
+    - "K. Horst"
+    - "A. Khandelwal"
+    - "M. Reynolds"
+    - "M.T. Wetscherek"
+    - "N.C.F. Codella"
+    - "J. Alvarez-Valle"
+    - "K. Panagiotis"
+    - "V. Salvatelli"
+  paper_url: "https://arxiv.org/abs/2509.12818"
+  image: "/assets/img/paper_thumbnails/data_scaling_laws_desktop.jpg"
+  image_mobile: "/assets/img/paper_thumbnails/data_scaling_laws_mobile.jpg"
+
+- id: perezgarcia2025raddino
+  title: "RAD-DINO: Exploring Scalable Medical Image Encoders Beyond Text Supervision"
+  venue: "Nature Machine Intelligence, 2025"
+  authors:
+    - "F. Pérez-García"
+    - "H. Sharma"
+    - "S. Bond-Taylor"
+    - "K. Bouzid"
+    - "V. Salvatelli"
+    - "M. Ilse"
+    - "S. Bannur"
+    - "D.C. Castro"
+    - "A. Schwaighofer"
+    - "M.P. Lungren"
+    - "M. Wetscherek"
+    - "N. Codella"
+    - "S.L. Hyland"
+    - "J. Alvarez-Valle"
+    - "O. Oktay"
+  paper_url: "https://www.nature.com/articles/s42256-024-00965-w"
+  model: "https://huggingface.co/microsoft/rad-dino"
+  image: "/assets/img/paper_thumbnails/raddino_desktop.jpg"
+  image_mobile: "/assets/img/paper_thumbnails/raddino_mobile.jpg"
+
+- id: perezgarcia2024radedit
+  title: "RadEdit: stress-testing biomedical vision models via diffusion image editing"
+  venue: "European Conference on Computer Vision, 2024"
+  authors:
+    - F. Pérez-García
+    - S. Bond-Taylor
+    - P.P Sanchez
+    - B. van Breugel
+    - D.C. Castro
+    - H. Sharma
+    - V. Salvatelli
+    - M.T. Wetscherek
+    - H. Richardson
+    - M.P. Lungren
+    - A. Nori
+    - J. Alvarez-Valle
+    - O. Oktay
+    - M. Ilse
+  paper_url: "https://link.springer.com/chapter/10.1007/978-3-031-73254-6_21"
+  model: "https://huggingface.co/microsoft/radedit"
+  image: "/assets/img/paper_thumbnails/radedit_desktop.jpg"
+  image_mobile: "/assets/img/paper_thumbnails/radedit_mobile.jpg"
+
+- id: sharma2024mairaseg
+  title: "MAIRA-Seg: Enhancing Radiology Report Generation with Segmentation-Aware Multimodal Large Language Models"
+  venue: "Machine Learning for Health (ML4H), 2024"
+  authors:
+    - "H. Sharma"
+    - "V. Salvatelli"
+    - "S. Srivastav"
+    - "K. Bouzid"
+    - "S. Bannur"
+    - "D. Castro"
+    - "M. Ilse"
+    - "S. Bond-Taylor"
+    - "M. Prasanna Ranjit"
+    - "F. Falck"
+    - "F. Pérez-García"
+    - "A. Schwaighofer"
+    - "H. Richardson"
+    - "M.T. Wetscherek"
+    - "S.L. Hyland"
+    - "J. Alvarez-Valle"
+  paper_url: "https://arxiv.org/abs/2411.11362"
+  image: "/assets/img/paper_thumbnails/maira_seg_desktop.jpg"
+  image_mobile: "/assets/img/paper_thumbnails/maira_seg_mobile.jpg"
+
+- id: bannur2024maira2
+  title: "MAIRA-2: Grounded Radiology Report Generation"
+  venue: "arXiv preprint 2406.04449, 2024"
+  authors:
+    - "S. Bannur"
+    - "K. Bouzid"
+    - "D. Castro"
+    - "A. Schwaighofer"
+    - "A. Thieme"
+    - "S. Bond-Taylor"
+    - "M. Ilse"
+    - "F. Pérez-García"
+    - "V. Salvatelli"
+    - "H. Sharma"
+    - "F. Meissen"
+    - "M. Ranjit"
+    - "S. Srivastav"
+    - "J. Gong"
+    - "N.C.F. Codella"
+    - "F. Falck"
+    - "O. Oktay"
+    - "M.P. Lungren"
+    - "M.T. Wetscherek"
+    - "J. Alvarez-Valle"
+    - "S.L. Hyland"
+  paper_url: "https://arxiv.org/abs/2406.04449"
+  model: "https://huggingface.co/microsoft/maira-2"
+  image: "/assets/img/paper_thumbnails/maira2_desktop.jpg"
+  image_mobile: "/assets/img/paper_thumbnails/maira2_mobile.jpg"
+
+- id: bondtaylor2023inftydiff
+  title: "$\\infty$-Diff: Infinite Resolution Diffusion with Subsampled Mollified States"
+  venue: "International Conference on Learning Representations, 2024"
+  authors:
+    - "S. Bond-Taylor"
+    - "C. G. Willcocks"
+  paper_url: "https://arxiv.org/abs/2303.18242"
+  code_url: "https://github.com/samb-t/infty-diff"
+  image: "/assets/img/paper_thumbnails/infty_diff_desktop.jpg"
+  image_mobile: "/assets/img/paper_thumbnails/infty_diff_mobile.jpg"
+
+- id: corona2023unaligned
+  title: "Unaligned 2D to 3D Translation with Conditional Vector-Quantized Code Diffusion using Transformers"
+  venue: "IEEE/CVF International Conference on Computer Vision, 2023"
+  authors:
+    - "A. Corona-Figuera"
+    - "S. Bond-Taylor"
+    - "N. Bhowmik"
+    - "Y. Gaus"
+    - "T. P. Breckon"
+    - "H. P. H. Shum"
+    - "C. G. Willcocks"
+  paper_url: "https://arxiv.org/abs/2308.14152"
+  image: "/assets/img/paper_thumbnails/unaligned_2d_to_3d_desktop.jpg"
+  image_mobile: "/assets/img/paper_thumbnails/unaligned_2d_to_3d_mobile.jpg"
+  code_url: "https://github.com/samb-t/x2ct-vqvae"
+
+- id: bondtaylor2022unleashing
+  title: "Unleashing Transformers: Parallel Token Prediction with Discrete Absorbing Diffusion for Fast High-Resolution Image Generation from Vector-Quantized Codes"
+  venue: "European Conference on Computer Vision, 2022"
+  authors:
+    - "S. Bond-Taylor"
+    - "P. Hessey"
+    - "H. Sasaki"
+    - "T. P. Breckon"
+    - "C. G. Willcocks"
+  paper_url: "https://arxiv.org/abs/2111.12701"
+  code_url: "https://github.com/samb-t/unleashing-transformers"
+  # project_page: "https://samb-t.github.io/unleashing-transformers"
+  # model: "https://drive.google.com/drive/folders/1pjTYcm-2NNzuAiNEO24gSt9dXu_kGQ6b?usp=sharing"
+  image: "/assets/img/paper_thumbnails/unleashing_transformers_desktop.jpg"
+  image_mobile: "/assets/img/paper_thumbnails/unleashing_transformers_mobile.jpg"
+
+- id: corona2022mednerf
+  title: "MedNeRF: Medical Neural Radiance Fields for Reconstructing 3D-aware CT-Projections from a Single X-ray"
+  venue: "IEEE Engineering in Medicine and Biology Conference, 2022"
+  authors:
+    - "A. Corona-Figueroa"
+    - "J. Frawley"
+    - "S. Bond-Taylor"
+    - "S. Bethapudi"
+    - "H. P.H. Shum"
+    - "C. G. Willcocks"
+  paper_url: "https://arxiv.org/abs/2202.01020"
+  code_url: "https://github.com/abrilcf/mednerf"
+  image: "/assets/img/paper_thumbnails/mednerf_desktop.jpg"
+  image_mobile: "/assets/img/paper_thumbnails/mednerf_mobile.jpg"
+
+- id: bond2021deep
+  title: "Deep Generative Modelling: A Comparative Review of VAEs, GANs, Normalizing Flows, Energy-Based and Autoregressive Models"
+  venue: "IEEE Transactions on Pattern Analysis and Machine Intelligence, 2021"
+  authors:
+    - "S. Bond-Taylor"
+    - "A. Leach"
+    - "Y. Long"
+    - "C.G. Willcocks"
+  paper_url: "https://ieeexplore.ieee.org/document/9555209"
+  image: "/assets/img/paper_thumbnails/deep_generative_models_desktop.jpg"
+  image_mobile: "/assets/img/paper_thumbnails/deep_generative_models_mobile.jpg"
+
+- id: bond2021gradient
+  title: "Gradient Origin Networks"
+  venue: "International Conference on Learning Representations, 2021"
+  authors:
+    - "S. Bond-Taylor"
+    - "C.G. Willcocks"
   paper_url: "https://arxiv.org/abs/2007.02798"
   code_url: "https://github.com/cwkx/GON"
-  image: "https://samb-t.github.io/assets/images/GON-image-150.png"
-  alt: "Visualization for Efficient Transformers paper"
+  # project_page: "https://cwkx.github.io/data/GON/"
+  image: "/assets/img/paper_thumbnails/gons_desktop.jpg"
+  image_mobile: "/assets/img/paper_thumbnails/gons_mobile.jpg"
+
+- id: leach2020shape
+  title: "Shape Tracing: An extension of sphere tracing for 3D non-convex collision in protein docking"
+  venue: "IEEE International Conference on Bioinformatics and Bioengineering 2020"
+  authors:
+    - "A. Leach"
+    - "L. S.P. Rudden"
+    - "S. Bond-Taylor"
+    - "J. C. Brigham"
+    - "M. T. Degiacomi"
+    - "C. G. Willcocks"
+  paper_url: "https://ieeexplore.ieee.org/abstract/document/9288105"
+  image: "/assets/img/paper_thumbnails/shape_tracing_desktop.jpg"
+  image_mobile: "/assets/img/paper_thumbnails/shape_tracing_mobile.jpg"
