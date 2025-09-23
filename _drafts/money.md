@@ -117,7 +117,3 @@ Notable attempted/considered sales that didn't proceed:
     Ordnance Survey (considered but remained public)
     BBC (partial privatization discussed but not implemented)
     Network Rail (returned to public control after Railtrack failed)
-
-This privatization program represents one of the largest transfers of assets from public to private ownership in British history. Would you like me to elaborate on any particular sale or its impact?
-Claude can make mistakes.
-Please double-check responses.

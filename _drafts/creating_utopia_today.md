@@ -1,6 +1,6 @@
 ---
 title: Creating Utopia Today
-description: This can't be as good as it gets. There are many thoughts on the future ranging from fairly visionless (e.g. utiopa for realists) to waiting for an uncertain future (e.g. fully automated luxury communism). The details also rarely get dug into. Let's think about what the world could look like today if we made different decisions and dig into the nitty gritty. 
+description: This can't be as good as it gets. There are many thoughts on the future ranging from fairly visionless (e.g. utiopa for realists) to waiting for an uncertain future (e.g. fully automated luxury xyz). The details also rarely get dug into. Let's think about what the world could look like today if we made different decisions and dig into the nitty gritty. 
 author: me
 categories: [Utopia]
 tags: [utopia]
