@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "x": [1, 2, 3],
+      "y": [2, 3, 1],
+      "type": "scatter",
+      "mode": "lines+markers",
+      "name": "trace1"
+    }
+  ],
+  "layout": {
+    "title": "My scatter",
+    "xaxis": { "fixedrange": true },
+    "yaxis": { "fixedrange": true }
+  },
+  "config": {
+    "displayModeBar": false,
+    "scrollZoom": false
+  }
+}

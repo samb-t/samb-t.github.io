@@ -47,7 +47,7 @@ jobs:
       - name: Build site
         run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
         env:
-          JEKYLL_ENV: "development" # "production"
+          JEKYLL_ENV: "production" # "development"
 
       # Temporarily disable site testing
       # - name: Test site

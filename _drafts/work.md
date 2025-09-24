@@ -58,3 +58,16 @@ In a world where people are free to choose what work they wish to do (which to a
 In other words, in a free world,the only situation we need to worry about is when there are not enough people who want to do the jobs that need doing. 
 
 As mentioned earlier, this a problem which already exists in our world. How well is it currently addressed? Not particularly well. The capitalist solution is to pay people more. However, critical jobs in the public sector such as the NHS are critically understaffed. Neoliberals would argue that this is why the state should not run these organisations, but a) underpaying is a political decision, b) there is a lack of trained staff, and crucually c) understaffing is not a problem only present in the public sectory. Private care homes, restaurants, hotels, supermarkets, airlines, trucking, etc. often run understaffed. In fact, jobs (often crucial and done due to their social value) often rely on volunteers such as the air ambulance, fire services, charities such as hospices and wildlife rescues, museums, theatres, sports clubs.
+
+### Current Proposals
+
+There are existing proposals such as universal basic income and 4 day work weeks. But these don't address the root cause.
+
+
+## Analysis
+
+The aim is to identify jobs that are currently done and determine which ones could be eliminated or reduced if the country were set up differently. Additionally, we will explore jobs that could have dramatically reduced working hours. While reduced hours will certainly be possible with more automation, we should not rely on this as a solution---unless a job is already almost fully automated. 
+
+### What Jobs Do People Do Currently?
+
+It's worth starting by looking at what jobs are done currently to identify jobs with the most workers and potential for reduced hours.

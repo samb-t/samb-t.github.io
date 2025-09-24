@@ -1,0 +1,75 @@
+{
+  "data": [
+    {
+      "type": "bar",
+      "x": [
+        "Managers, directors & senior officials",
+        "Professional occupations",
+        "Associate professional & technical",
+        "Administrative & secretarial",
+        "Skilled trades & machine operatives",
+        "Caring, leisure & other service occupations",
+        "Sales & customer service occupations",
+        "Process, plant & machine operatives",
+        "Elementary occupations"
+      ],
+      "y": [
+        3648300, 8778400, 4941200, 3070800, 2852900, 2859000, 1950100, 1869000,
+        2985100
+      ],
+      "customdata": [11.0, 26.6, 15.0, 9.3, 8.6, 8.7, 5.9, 5.7, 9.0],
+      "hovertemplate": "Count: %{y:~s}<br>Share: %{customdata}%<extra></extra>",
+      "marker": {
+        "line": {
+          "width": 0
+        }
+      }
+    }
+  ],
+  "layout": {
+    "title": {
+      "text": "Counts of people by broad occupation<br>(UK, Apr 2024\u2013Mar 2025)",
+      "x": 0.5
+    },
+    "xaxis": {
+      "title": {
+        "text": "SOC2020 major group"
+      },
+      "tickangle": -35,
+      "tickfont": {
+        "size": 11
+      },
+      "fixedrange": true,
+      "showspikes": false,
+      "spikemode": null
+    },
+    "yaxis": {
+      "title": {
+        "text": "Number in employment"
+      },
+      "tickformat": "~s",
+      "fixedrange": true
+    },
+    "hovermode": "x unified",
+    "hoverlabel": {
+      "bgcolor": "rgba(255,255,255,0.9)",
+      "bordercolor": "rgba(0,0,0,0.2)",
+      "font": {
+        "color": "black"
+      }
+    },
+    "margin": {
+      "t": 60,
+      "b": 160,
+      "l": 80,
+      "r": 40
+    },
+    "template": "plotly_white",
+    "autosize": true
+  },
+  "config": {
+    "responsive": true,
+    "displayModeBar": false,
+    "scrollZoom": false
+  }
+}

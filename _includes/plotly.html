@@ -1,0 +1,20 @@
+<!-- _includes/plotly.html -->
+<div id="{{ include.id | default: "plot-" | append: include.plot }}"></div>
+
+<script>
+(function(){
+  var el = document.getElementById("{{ include.id | default: "plot-" | append: include.plot }}");
+  if(!el) return;
+
+  // read figure data from Jekyll site.data
+  var fig = {{ site.data.plots[include.plot] | jsonify }};
+
+  var opts = fig.config || {};
+  // allow overriding via include attributes
+  {% if include.responsive %}
+  opts.responsive = true;
+  {% endif %}
+
+  Plotly.newPlot(el, fig.data, fig.layout || {}, opts);
+})();
+</script>
