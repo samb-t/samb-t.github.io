@@ -1,5 +1,10 @@
 {
   "file_types": {
     "Liquid": ["**/_includes/*.html", "**/_layouts/*.html"]
+  },
+  "languages": {
+    "HTML": {
+      "format_on_save": "off"
+    }
   }
 }

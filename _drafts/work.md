@@ -2,6 +2,8 @@
 title: Why Do We Work So Much?
 description: But what are we working for? And do we really need to?
 author: me
+series: Utopia
+series_order: 2
 categories: [Utopia]
 tags: [utopia, work]
 ---

@@ -2,6 +2,8 @@
 title: Do We Really Need Money?
 description: Description
 author: me
+series: Utopia
+series_order: 3
 categories: [Utopia]
 tags: [utopia, money]
 ---

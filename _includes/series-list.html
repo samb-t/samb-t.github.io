@@ -1,0 +1,51 @@
+{%- comment -%}
+Show up to `include.max` posts (including the current post) in the same series.
+Usage:
+  {% include series-list.html max=5 %}
+Requires:
+  - posts to have `series: "Name"` in front matter
+  - optional numeric `series_order: 1` for explicit ordering
+Behaviour:
+  - Posts with `series_order` are shown first (ascending).
+  - Posts without `series_order` are shown after, newest first.
+  - The current page IS INCLUDED and its title is shown in blue.
+  - `include.max` (default 5) limits the number of items shown (the current page counts towards the limit).
+{%- endcomment -%}
+
+{%- assign series_with_order = '' | split: '' -%}
+{%- assign series_without_order = '' | split: '' -%}
+
+{%- for post in site.posts -%}
+  {%- if post.series and page.series and post.series == page.series -%}
+    {%- if post.series_order -%}
+      {%- assign series_with_order = series_with_order | push: post -%}
+    {%- else -%}
+      {%- assign series_without_order = series_without_order | push: post -%}
+    {%- endif -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- assign series_with_order = series_with_order | sort: "series_order" -%}
+{%- assign series_without_order = series_without_order | sort: "date" -%}
+{%- assign series_without_order = series_without_order | reverse -%}
+
+{%- assign ordered = series_with_order | concat: series_without_order -%}
+{%- assign total = ordered.size -%}
+
+{%- if total > 0 -%}
+  <section id="access-series">
+    <h2 class="panel-heading">More in Collection</h2>
+    <ul class="content list-unstyled ps-0 pb-1 ms-1 mt-2">
+      {%- for p in ordered -%}
+        <li class="text-truncate lh-lg">
+            {%- if p.url == page.url -%}
+              <a class="is-active-link" href="{{ p.url | relative_url }}">{{ p.title }}</a>
+            {%- else -%}
+              <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
+            {%- endif -%}
+        </li>
+      {%- endfor -%}
+    </ul>
+  </section>
+  <!-- #access-series -->
+{%- endif -%}

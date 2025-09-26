@@ -95,3 +95,24 @@
   max-width: 100%;
   height: auto !important;
 }
+
+#access-series {
+  a {
+    color: inherit;
+
+    &:hover {
+      @extend %link-hover;
+    }
+
+    @extend %no-bottom-border;
+  }
+}
+
+#access-series a.is-active-link {
+  color: var(--toc-highlight) !important;
+  font-weight: 600;
+}
+
+#access-series a.is-active-link:hover {
+  border-bottom: 0;
+}
