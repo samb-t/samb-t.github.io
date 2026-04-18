@@ -81,6 +81,51 @@
   border-bottom: 0 !important;
 }
 
+.card-project-title {
+  border-bottom: 0 !important;
+}
+
+/* Open source project action buttons styling */
+.project-actions .btn {
+  display: flex;
+  align-items: center;
+  width: 1.75rem;
+  height: 1.75rem;
+  padding: 0.375rem 0.375rem;
+  box-shadow: #efefef 0 0 0 1px;
+  border-radius: 50%;
+  border-bottom: 0 !important;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  justify-content: center;
+}
+
+.project-actions .btn:hover {
+  background-color: #e8eff4;
+  color: black;
+}
+
+.project-actions .btn:hover i {
+  color: black;
+}
+
+.project-actions .btn i {
+  color: #8e8e8e;
+  transition: all 0.3s ease-in-out;
+}
+
+.project-actions {
+  position: relative;
+  z-index: 10;
+}
+
+.project-actions a {
+  position: relative;
+  z-index: 11;
+  pointer-events: auto;
+  text-align: center;
+}
+
 /* Fix image container height */
 .post-preview .col-md-3 {
   height: auto !important;

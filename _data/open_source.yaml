@@ -1,0 +1,10 @@
+- id: fora
+  name: "Fora"
+  description: >-
+    A terminal UI (TUI) for Azure ML. Browse recent jobs, experiments, and
+    compute resources, search runs via MLflow integration, and view metric
+    histories and charts — all without leaving your terminal.
+  website_url: "https://samb-t.github.io/fora/"
+  github_url: "https://github.com/samb-t/fora"
+  image: "/assets/img/open_source_thumbnails/fora_desktop.jpg"
+  image_mobile: "/assets/img/open_source_thumbnails/fora_mobile.jpg"
